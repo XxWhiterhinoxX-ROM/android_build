@@ -1682,7 +1682,18 @@ otapackage: $(INTERNAL_OTA_PACKAGE_TARGET)
 infamous: otapackage
 	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(INFAMOUS_TARGET_PACKAGE)
 	$(hide) $(MD5SUM) $(INFAMOUS_TARGET_PACKAGE) > $(INFAMOUS_TARGET_PACKAGE).md5sum
-	@echo -e ${CL_CYN}"Package Complete: $(INFAMOUS_TARGET_PACKAGE)"${CL_RST}
+	@echo -e ${CL_BLU}""
+	@echo -e ""
+	@echo -e ${CL_BLU}"▄█    ▄   ▄████  ██   █▀▄▀█ ████▄   ▄      ▄▄▄▄▄   "
+	@echo -e ${CL_BLU}"██     █  █▀   ▀ █ █  █ █ █ █   █    █    █     ▀▄ "
+	@echo -e ${CL_BLU}"██ ██   █ █▀▀    █▄▄█ █ ▄ █ █   █ █   █ ▄  ▀▀▀▀▄   "
+	@echo -e ${CL_BLU}"▐█ █ █  █ █      █  █ █   █ ▀████ █   █  ▀▄▄▄▄▀    "
+	@echo -e ${CL_BLU}" ▐ █  █ █  █        █    █        █▄ ▄█            "
+	@echo -e ${CL_BLU}"   █   ██   ▀      █    ▀          ▀▀▀             "
+	@echo -e ${CL_BLU}"                  ▀                                "
+	@echo -e ${CL_BLU}""
+	@echo -e ""${CL_RST}
+	@echo -e ${CL_CYN}"Package Complete: $(INFAMOUS_TARGET_PACKAGE)"${CL_BLU}
 
 endif    # recovery_fstab is defined
 endif    # TARGET_NO_KERNEL != true
